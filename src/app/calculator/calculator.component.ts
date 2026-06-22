@@ -67,12 +67,10 @@ export class CalculatorComponent implements OnInit {
   }
 
   onClear() {
-
-    this.calculatorForm.get('firstInput').setValue(null);
-    this.calculatorForm.get('secondInput').setValue(null);
-    this.calculatorForm.get('operator').setValue('');
-    this.result = null;
-
-  }
+  this.calculatorForm.get('firstInput')!.setValue(null);
+  this.calculatorForm.get('secondInput')!.setValue(null);
+  this.calculatorForm.get('operator')!.setValue('');
+  this.result = null;
+}
 
 }
